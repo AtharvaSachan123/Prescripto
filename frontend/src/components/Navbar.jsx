@@ -66,7 +66,7 @@ const Navbar = () => {
             </div>
 
             {/* Logout Confirmation */}
-            <div className={`fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-opacity duration-300 ${showLogoutConfirm ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+            <div className={`fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-opacity duration-300 ${showLogoutConfirm ? 'opacity-100 pointer-events-auto z-30' : 'opacity-0 pointer-events-none'}`}>
                 <div className={`bg-white p-6 rounded shadow-lg transition-transform duration-300 ${showLogoutConfirm ? 'scale-100' : 'scale-95'}`}>
                     <p className='mb-4'>Are you sure you want to logout?</p>
                     <div className='flex gap-4'>
