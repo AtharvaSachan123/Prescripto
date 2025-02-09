@@ -29,7 +29,7 @@ const MyAppointments = () => {
                   <span className="font-medium">Date & Time:</span> 25, July, 2024 | 8:30 PM
                 </p>
               </div>
-
+              <div></div>
               {/* Action Buttons */}
               <div className="flex flex-col gap-2">
                 <button className="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600">Pay Online</button>
