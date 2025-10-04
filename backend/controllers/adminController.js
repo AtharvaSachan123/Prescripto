@@ -10,16 +10,16 @@ const addDoctor=async(req,res)=>{
 
         //checking for all data to add doctor
         if(!name || !email || !password || !speciality || !degree || !experience || !about || !available || !fees || !address || !date){
-            return res.json({success:"false",message:"Please fill all the fields"});
+            return res.json({success:false,message:"Please fill all the fields"});
         }
 
         //validating email
         if(!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
-            return res.json({success:"false",message:"Please enter a valid email"});
+            return res.json({success:false,message:"Please enter a valid email"});
         }
         //validating password
         if(password.length<8){
-            return res.json({success:"false",message:"Password should be at least 6 characters"});
+            return res.json({success:false,message:"Password should be at least 6 characters"});
         }
         //hashing password
         const salt=await bycrypt.genSalt(10); 
@@ -49,7 +49,7 @@ const addDoctor=async(req,res)=>{
             res.json({success:"true",message:"Doctor added successfully"});
     } catch (error) {
         console.log(error);
-        res.json({success:"false",message:error.message});
+        res.json({success:false,message:error.message});
         
     } 
 }
@@ -67,7 +67,7 @@ const loginAdmin=async(req,res)=>{
 
         }catch(error){
             console.log(error);
-            res.json({success:"false",message:error.message});
+            res.json({success:false,message:error.message});
 
         }
 }
